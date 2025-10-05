@@ -9,7 +9,7 @@ body{
         .navbar {
             position: sticky;
             top: 0;
-            width: 90%;
+            width: 95%;
             background: rgba(13,13,13,0.85);
             display: flex;
             justify-content: space-between;
@@ -260,8 +260,13 @@ body{
             box-shadow: 0 2px 8px #ff5c1a22;
             transition: background 0.2s;
         }
-        .project-overlay .details-btn:hover {
-            background: #e04d0f;
+        .project-overlay .details-btn a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .project-overlay .details-btn a:hover {
+            color:#333
         }
         .about-section {
             padding: 3rem 2.5rem 2rem 2.5rem;
