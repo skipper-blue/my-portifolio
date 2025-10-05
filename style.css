@@ -583,11 +583,7 @@ body{
             }
             .project-card,
             .skills-category {
-<<<<<<< HEAD
                 display: block;
-=======
-                display: inline-block;
->>>>>>> 84fb13881b7645285da82fca67844d81ecb76a16
                 min-width: 260px;
                 vertical-align: top;
                 margin-right: 1rem;
