@@ -9,7 +9,7 @@ body{
         .navbar {
             position: sticky;
             top: 0;
-            width: 90%;
+            width: 100%;
             background: rgba(13,13,13,0.85);
             display: flex;
             justify-content: space-between;
