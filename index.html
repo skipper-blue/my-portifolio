@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name | Frontend Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Font Awesome for icons -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">ERIC</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="nav-toggle-icon"></span>
+        </button>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <h3>MAINA ERIC KANYOKO</h3>
+            <h2>Frontend Engineer & Cybersecurity  and  networking expert</h2>
+            <p>I build accessible, pixel-perfect web apps, secure networks, and robust cybersecurity solutions.</p>
+            <button class="cta-btn">See my work</button>
+        </div>
+        <div class="hero-right">
+            <div class="profile-img-bg">
+                <img src="profile-pic.jpg" alt="My-profile" class="profile-img">
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-list">
+            <div class="project-card">
+                <div class="project-thumb"><i class="bi bi-laptop"></i></div>
+                <div class="project-info">
+                    <h4>Portfolio Website</h4>
+                    <p>Modern responsive portfolio built with HTML, CSS, and JS.</p>
+                </div>
+                <div class="project-overlay">
+                    <p>Showcases my frontend skills and design sense.</p>
+                    <button class="details-btn">View Details</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb"><i class="bi bi-shield-lock"></i></div>
+                <div class="project-info">
+                    <h4>Network Security Dashboard</h4>
+                    <p>Real-time monitoring and alerts for network threats.</p>
+                </div>
+                <div class="project-overlay">
+                    <p>Built with React and Bootstrap for security teams.</p>
+                    <button class="details-btn">View Details</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb"><i class="bi bi-phone"></i></div>
+                <div class="project-info">
+                    <h4>Mobile App UI</h4>
+                    <p>Clean and intuitive interface for a productivity app.</p>
+                </div>
+                <div class="project-overlay">
+                    <p>Designed for Android and iOS platforms.</p>
+                    <button class="details-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project Status Section -->
+    <section class="project-status-section">
+        <h2>Project Status</h2>
+        <div class="status-list">
+            <div class="status-card ongoing">
+                <span class="status-icon"><i class="bi bi-hourglass-split"></i></span>
+                <h3>Ongoing</h3>
+                <p>2 projects in progress</p>
+            </div>
+            <a href="#projects" class="status-card completed">
+                <span class="status-icon"><i class="bi bi-check-circle"></i></span>
+                <h3>Completed</h3>
+                <p>5 projects finished</p>
+            </a>
+            <div class="status-card pending">
+                <span class="status-icon"><i class="bi bi-calendar"></i></span>
+                <h3>Pending</h3>
+                <p>1 project pending</p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>About</h2>
+        <p>
+            I'm a frontend engineer passionate about building accessible, high-quality web experiences. I love working with modern frameworks and solving real-world problems.
+        </p>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Cybersecurity</h3>
+                <ul>
+                    <li>Network Security</li>
+                    <li>Firewalls</li>
+                    <li>Penetration Testing</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Networking</h3>
+                <ul>
+                    <li>TCP/IP</li>
+                    <li>Routing</li>
+                    <li>Switching</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Let’s work together!</h2>
+        <p class="contact-desc">
+            Interested in collaborating or have a project in mind? Reach out!
+        </p>
+        <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:your@email.com" title="Email"><i class="bi bi-envelope"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Name. All rights reserved.
+    </footer>
+    <script>
+        // Simple navbar toggle script
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.navbar nav');
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav-open');
+        });
+    </script>
+</body>
+</html>
