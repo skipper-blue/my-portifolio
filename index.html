@@ -1,202 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome - Skipper's Portfolio</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Skipper Eric Kanyoko's portfolio: Frontend Engineer, Cybersecurity & Networking Expert. View projects, skills, and contact info.">
-    <meta name="keywords" content="Portfolio, Frontend Engineer, Cybersecurity, Networking, Eric Kanyoko, Web Developer, Projects">
-    <meta name="author" content="Eric Kanyoko">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Social Sharing Meta Tags -->
-    <meta property="og:title" content="Skipper: Portfolio">
-    <meta property="og:description" content="Explore Eric Kanyoko's work in frontend engineering, cybersecurity, and networking.">
-    <meta property="og:image" content="profile-pic.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/">
+  <style>
+    :root{
+      --bg:#000;
+      --accent:#00c8ff; /* navy-cyan accent */
+      --muted:#8a98a6;
+    }
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Skipper: Portfolio">
-    <meta name="twitter:description" content="Explore Eric Kanyoko's work in frontend engineering, cybersecurity, and networking.">
-    <meta name="twitter:image" content="profile-pic.jpg">
+    html,body{height:100%;margin:0;font-family:Orbitron,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{
+      background: radial-gradient(1200px 600px at 85% 20%, #1b2b36 0%, #000 25%, #000 60%);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    /* main container keeps content to the right on wide screens */
+    .stage{
+      width:100%;
+      max-width:1200px;
+      display:flex;
+      align-items:center;
+      justify-content:center; /* changed to center alignment */
+      box-sizing:border-box;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    .profile-card{
+      width:320px;
+      background:transparent;
+      text-align:center;
+      padding:28px 20px;
+      border-radius:12px;
+      position:relative;
+      color:var(--accent);
+      filter:drop-shadow(0 8px 40px rgba(0,200,255,0.06));
+    }
 
-    <title>Skipper: portifolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    /* Avatar / device icon */
+    .avatar{
+      width:88px;
+      height:88px;
+      border-radius:14px;
+      margin:0 auto 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, rgba(0,200,255,0.08), rgba(0,200,255,0.02));
+      box-shadow: 0 0 36px rgba(0,200,255,0.12), inset 0 -6px 14px rgba(0,0,0,0.25);
+      border:2px solid rgba(0,200,255,0.14);
+      transition:transform .32s ease, box-shadow .32s ease;
+    }
+    .avatar i{
+      font-size:34px;
+      color:var(--accent);
+      text-shadow:0 0 12px rgba(0,200,255,0.55);
+    }
+    .avatar:hover{ transform:translateY(-6px) scale(1.03); box-shadow: 0 8px 48px rgba(0,200,255,0.18); }
 
-    <!-- Font Awesome for icons -->
+    h1.profile-title{
+      margin:0 0 18px;
+      font-size:20px;
+      color:var(--accent);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      text-shadow:0 0 18px rgba(0,200,255,0.18);
+    }
+
+    .icons-row{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:18px;
+    }
+    .icon-btn{
+      display:inline-flex;
+      width:44px;
+      height:44px;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      background:linear-gradient(180deg, rgba(0,200,255,0.03), rgba(0,200,255,0.01));
+      color:var(--accent);
+      border:1px solid rgba(0,200,255,0.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition:transform .18s ease, box-shadow .18s ease, background .18s;
+      text-decoration:none;
+    }
+    .icon-btn i{ font-size:18px; }
+    .icon-btn:hover{ transform:translateY(-5px) scale(1.06); box-shadow: 0 12px 34px rgba(0,200,255,0.12); background:linear-gradient(180deg, rgba(0,200,255,0.08), rgba(0,200,255,0.02)); }
+
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      letter-spacing:0.6px;
+      color:#54d1ff; /* light cyan for designed by line */
+    }
+
+    /* small caption under icons in muted tone */
+    .sub{
+      font-size:12px;
+      color:rgba(84,209,255,0.9);
+      margin-top:12px;
+    }
+
+    /* Add fade-out animation */
+    @keyframes fadeOut {
+      to { opacity: 0; transform: translateY(-10px); }
+    }
+
+    .fade-out {
+      animation: fadeOut 0.5s ease-out forwards;
+    }
+
+    /* Loading indicator */
+    .loading {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--muted);
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .loading.visible {
+      opacity: 1;
+    }
+
+    /* Welcome text additions */
+    .welcome-text {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease-out 0.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsiveness: center card on narrow screens and scale down */
+    @media (max-width:700px){
+      .stage{ justify-content:center; padding:6vh 4vw; }
+      .profile-card{ width:min(86vw,380px); padding:20px; }
+      .avatar{ width:72px; height:72px; }
+      h1.profile-title{ font-size:18px; }
+    }
+  </style>
+
+  <script>
+    // Redirect after 5 seconds
+    window.addEventListener('load', () => {
+      const card = document.querySelector('.profile-card');
+      const loading = document.querySelector('.loading');
+      
+      // Show loading text after 3 seconds
+      setTimeout(() => {
+        loading.classList.add('visible');
+      }, 3000);
+
+      // Fade out and redirect after 5 seconds
+      setTimeout(() => {
+        card.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = '/assets/pages/profile.html';
+        }, 500);
+      }, 10000);
+    });
+  </script>
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">Skipper</div>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <span class="nav-toggle-icon"></span>
-        </button>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <div class="stage" role="main" aria-label="Profile stage">
+    <aside class="profile-card" aria-labelledby="profile-title">
+      <!-- Welcome message -->
+      <div class="welcome-text" aria-live="polite">
+        Welcome to my digital space
+      </div>
+
+      <!-- ...existing avatar div... -->
+      
+      <div class="avatar" aria-hidden="true" title="Profile icon">
+        <i class="bi bi-laptop"></i>
+      </div>
+
+      <h1 id="profile-title" class="profile-title">Skipper-blue</h1>
+
+      <div class="icons-row" role="navigation" aria-label="Profile links">
+        <a class="icon-btn" href="https://github.com/skipper-blue" target="_blank" title="GitHub (opens in new tab)" rel="noopener">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="icon-btn" href="#" title="Portfolio">
+          <i class="bi bi-code-slash"></i>
+        </a>
+        <a class="icon-btn" href="#" title="About me">
+          <i class="bi bi-person"></i>
+        </a>
+      </div>
+
+      <div class="sub">Frontend Engineer · Cybersecurity Expert</div>
+    </aside>
+
+    <!-- Loading indicator -->
+    <div class="loading" aria-live="polite">
+      Redirecting to portfolio...
     </div>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-left">
-            <h3>MAINA ERIC</h3>
-            <h2>Frontend Engineer & Cybersecurity  and  networking expert</h2>
-            <p>I build accessible, pixel-perfect web apps, secure networks, and robust cybersecurity solutions.</p>
-            <button class="cta-btn">See my work</button>
-        </div>
-        <div class="hero-right">
-            <div class="profile-img-bg">
-                <img src="profile-pic.jpg" alt="My-profile" class="profile-img">
-            </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-        <h2>Projects</h2>
-        <div class="projects-list">
-            <div class="project-card">
-                <div class="project-thumb gaming-thumb"><i class="bi bi-laptop"></i></div>
-                <div class="project-info">
-                    <h4>Gaming Website</h4>
-                    <p>Modern shopping site for games. </p>
-                </div>
-                <div class="project-overlay">
-                    <p>Showcases my frontend skills and design sense, and building of an e-commerce site</p>
-                    <button class="details-btn"><a href="http://skipperglitch.alwaysdata.net/">Visit us</a></button>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-thumb"><i class="bi bi-shield-lock"></i></div>
-                <div class="project-info">
-                    <h4>Network Security Dashboard</h4>
-                    <p>Real-time monitoring and alerts for network threats.</p>
-                </div>
-                <div class="project-overlay">
-                    <p>Built with React and Bootstrap for security teams.</p>
-                    <button class="details-btn"><a href="">View Details</a></button>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-thumb"><i class="bi bi-phone"></i></div>
-                <div class="project-info">
-                    <h4>Mobile App UI</h4>
-                    <p>Clean and intuitive interface for a productivity app.</p>
-                </div>
-                <div class="project-overlay">
-                    <p>Designed for Android and iOS platforms.</p>
-                    <button class="details-btn"><a href="">View Details</a></button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Project Status Section -->
-    <section class="project-status-section">
-        <h2>Project Status</h2>
-        <div class="status-list">
-            <div class="status-card ongoing">
-                <span class="status-icon"><i class="bi bi-hourglass-split"></i></span>
-                <h3>Ongoing</h3>
-                <p>2 projects in progress</p>
-            </div>
-            <a href="#projects" class="status-card completed">
-                <span class="status-icon"><i class="bi bi-check-circle"></i></span>
-                <h3>Completed</h3>
-                <p>4 projects finished</p>
-            </a>
-            <div class="status-card pending">
-                <span class="status-icon"><i class="bi bi-calendar"></i></span>
-                <h3>Pending</h3>
-                <p>1 project pending</p>
-            </div>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <h2>About</h2>
-        <p>
-            I'm a frontend engineer passionate about building accessible, high-quality web experiences. I love working with modern frameworks and solving real-world problems.
-        </p>
-        <div class="skills-grid">
-            <div class="skills-category">
-                <h3>Frontend</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Slevte</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h3>Back-end</h3>
-                <ul>
-                    <li>PHP</li>
-                    <li>Node.js</li>
-                    <li>SQL</li>
-                    <li>MYSQL</li>
-                    <li>DJANGO</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h3>Cybersecurity</h3>
-                <ul>
-                    <li>Network Security</li>
-                    <li>Firewalls</li>
-                    <li>Penetration Testing</li>
-                    <li>Cloud computing</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h3>Networking</h3>
-                <ul>
-                    <li>TCP/IP</li>
-                    <li>Routing</li>
-                    <li>Switching</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <h2>Let’s work together!</h2>
-        <p class="contact-desc">
-            Interested in collaborating or have a project in mind? Reach out!
-        </p>
-        <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit" class="contact-btn">Send Message</button>
-        </form>
-        <div class="social-icons">
-            <a href="https://wa.me/25471519679" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.instagram.com/i.t.s_skipper?igsh=MWN2cDVuMmpxbGptNA==" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            <a href="mailto:maineric692@gmail.com" title="Email"><i class="bi bi-envelope"></i></a>
-            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-        </div>
-    </section>
-    <footer>
-        &copy; 2025 Name. All rights reserved.
-    </footer>
-    <script>
-        // Simple navbar toggle script
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.navbar nav');
-        navToggle.addEventListener('click', () => {
-            nav.classList.toggle('nav-open');
-        });
-    </script>
+  </div>
 </body>
 </html>

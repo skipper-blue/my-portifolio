@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skipper — Portfolio</title>
+
+  <!-- SEO / Social meta (kept short) -->
+  <meta name="description" content="Skipper Eric Kanyoko — Frontend Engineer, Cybersecurity & Networking.">
+  <meta name="author" content="Eric Kanyoko">
+  <meta property="og:image" content="profile-pic.jpg">
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV background image (fades in behind the navbar) -->
+  <div class="nav-bg" aria-hidden="true" role="presentation"></div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" role="banner" id="mainNav">
+    <div class="container nav-container">
+      <a class="logo" href="#home" aria-label="Skipper home">Skipper</a>
+
+      <nav class="nav-main" role="navigation" aria-label="Primary">
+        <ul class="nav-pill" role="menubar">
+          <li role="none"><a role="menuitem" class="nav-link" href="#home"><i class="bi bi-house"></i><span>Home</span></a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="#about"><i class="bi bi-person"></i><span>About</span></a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="#projects"><i class="bi bi-folder2-open"></i><span>Projects</span></a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="#services"><i class="bi bi-tools"></i><span>Services</span></a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="#contact"><i class="bi bi-envelope"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content" id="home">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <div class="kicker">Available for freelance</div>
+          <h1 class="hero-title">Hi, I'm Maina Eric</h1>
+          <p class="hero-sub">Frontend Engineer · Cybersecurity & Networking expert. I build accessible, pixel-perfect web apps and secure network solutions.</p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="cta-btn primary">See my work</a>
+            <a href="#contact" class="cta-btn ghost">Contact me</a>
+          </div>
+
+          <ul class="hero-meta" aria-hidden="true">
+            <li><i class="bi bi-geo-alt-fill"></i> Nairobi, Kenya</li>
+            <li><i class="bi bi-check-circle-fill"></i> Available now</li>
+          </ul>
+        </div>
+
+        <div class="hero-right" role="img" aria-label="Profile illustration">
+          <div class="profile-frame">
+            <img src="/assets/profileavatar/profile-pic1.jpg" alt="Profile image" class="profile-img">
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+        <section id="about" class="about-section" aria-labelledby="about-title">
+        <div class="container about-inner">
+            <div class="about-left">
+            <p class="eyebrow">About me</p>
+            <h2 id="about-title">Building Meaningful Digital Experiences</h2>
+            <p class="about-lead">I'm a creative front‑end developer passionate about building modern and responsive web experiences. I combine design and engineering to bring ideas to life with clean, accessible code.</p>
+            <p class="about-body">When I'm not coding I learn new technologies, improve my projects and explore faster, more engaging UX patterns. I value continuous learning, attention to detail, and meaningful design.</p>
+
+            <div class="drive-title">What Drives Me</div>
+            <div class="drive-cards" role="list">
+                <button class="drive-card" data-open="modal" data-tab="languages" aria-haspopup="dialog">
+                <h4>Languages & Tools</h4>
+                <p class="card-sub">HTML · CSS · JavaScript · React · Node</p>
+                </button>
+
+                <button class="drive-card" data-open="modal" data-tab="education" aria-haspopup="dialog">
+                <h4>Education</h4>
+                <p class="card-sub">USTHB — Computer Science</p>
+                </button>
+
+                <button class="drive-card" data-open="modal" data-tab="projects" aria-haspopup="dialog">
+                <h4>Projects</h4>
+                <p class="card-sub">Built 5+ production projects</p>
+                </button>
+            </div>
+            </div>
+
+            <aside class="about-right" aria-hidden="false">
+            <div class="about-image-frame"><img src="/assets/profileavatar/profile-pic.jpg" alt="Profile illustration" class="about-image"></div>
+            </aside>
+        </div>
+        </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Featured Work</h2>
+        <p class="projects-intro">A showcase of recent projects demonstrating design, frontend development and integration work.</p>
+
+        <div class="projects-list" role="list">
+          <article class="project-card" role="listitem">
+            <figure class="project-thumb"><img src="/assets/projects/ecommerce.PNG" alt="E‑Commerce UI screenshot"></figure>
+            <div class="project-info">
+              <h3 class="project-title">E‑Commerce Website</h3>
+              <p class="project-desc">Online store UI with cart and payment flow, responsive layout and accessible components.</p>
+              <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+              <div class="project-actions">
+                <a class="btn btn-ghost" href="https://github.com/skipper-blue/skipperglitch" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-primary" href="https://skipperglitch.alwaysdata.net/" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <figure class="project-thumb"><img src="/assets/projects/portifolio.PNG" alt="Portfolio screenshot"></figure>
+            <div class="project-info">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">Personal portfolio showcasing projects, blog and contact form with smooth animations.</p>
+              <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span></div>
+              <div class="project-actions">
+                <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-primary" href="https://skipper-blue.github.io/my-portifolio/" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <figure class="project-thumb"><img src="assets/projects/weather.jpg" alt="Weather app screenshot"></figure>
+            <div class="project-info">
+              <h3 class="project-title">Weather App</h3>
+              <p class="project-desc">Realtime weather dashboard with API integration and charted data.</p>
+              <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">API</span></div>
+              <div class="project-actions">
+                <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title" class="center">Our Features & Services</h2>
+        <p class="projects-intro center" style="margin-bottom:1.6rem;  text-align: center;">I offer end-to-end solutions: design and build performant web apps, APIs and user-focused interfaces.</p>
+        <div class="services-grid" role="list">
+          <article class="service-card" role="listitem" aria-labelledby="s1">
+            <div class="service-illustration" aria-hidden="true"><i class="bi bi-code-slash" style="font-size:34px;color:var(--accent)"></i></div>
+            <h3 id="s1" class="service-title">Web Development</h3>
+            <p class="service-desc">Responsive, accessible front‑end development using modern HTML, CSS and JavaScript.</p>
+          </article>
+
+          <article class="service-card" role="listitem" aria-labelledby="s2">
+            <div class="service-illustration" aria-hidden="true"><i class="bi bi-phone" style="font-size:34px;color:var(--accent)"></i></div>
+            <h3 id="s2" class="service-title">App Development</h3>
+            <p class="service-desc">Single‑page apps and progressive web apps with React / frameworks of your choice.</p>
+          </article>
+
+          <article class="service-card" role="listitem" aria-labelledby="s3">
+            <div class="service-illustration" aria-hidden="true"><i class="bi bi-bar-chart" style="font-size:34px;color:var(--accent)"></i></div>
+            <h3 id="s3" class="service-title">UX & UI Design</h3>
+            <p class="service-desc">User-centered interfaces and interaction design focused on clarity and conversion.</p>
+          </article>
+
+          <article class="service-card" role="listitem" aria-labelledby="s4">
+            <div class="service-illustration" aria-hidden="true"><i class="bi bi-envelope-paper" style="font-size:34px;color:var(--accent)"></i></div>
+            <h3 id="s4" class="service-title">API & Integrations</h3>
+            <p class="service-desc">Backend integration, REST APIs and third‑party service connections for production apps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <p class="eyebrow center">CONTACT</p>
+        <h2 class="section-title center" style="text-align: center;">Get In Touch With Us</h2>
+        <p class="section-intro center">
+          I'm always open to discuss exciting projects and new opportunities. Let's collaborate!
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="bi bi-envelope"></i>
+              <a href="mailto:maineric692@gmail.com">maineric692@gmail.com</a>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-telephone"></i>
+              <a href="tel:+254715196799">+254 715 196 799</a>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-geo-alt"></i>
+              <span>Nairobi, Kenya</span>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-btn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://wa.me/254715196799" target="_blank" rel="noopener" class="social-btn">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              Send Message
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center">&copy;skipper-blue.</div>
+  </footer>
+
+  <!-- Modal (same as before) -->
+  <div id="infoModal" class="info-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="infoModalTitle">
+    <div class="info-modal-panel" role="document">
+      <button class="modal-close" aria-label="Close info">✕</button>
+      <div class="modal-head">
+        <h3 id="infoModalTitle">Details</h3>
+        <nav class="modal-tabs" role="tablist" aria-label="Info tabs">
+          <button class="tab-btn active" data-tab="languages" role="tab" aria-selected="true">Languages</button>
+          <button class="tab-btn" data-tab="education" role="tab" aria-selected="false">Education</button>
+          <button class="tab-btn" data-tab="projects" role="tab" aria-selected="false">Projects</button>
+        </nav>
+      </div>
+
+      <div class="modal-body">
+        <div class="tab-panel" data-panel="languages">
+          <ul class="lang-list">
+            <li>HTML5</li>
+            <li>CSS3 / SASS</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React / Next.js</li>
+            <li>Node.js / Express</li>
+            <li>Python (basics)</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" data-panel="education" hidden>
+          <div class="edu-item">
+            <h4>USTHB — Computer Science</h4>
+            <p>Degree focused on algorithms, networks and systems. Graduated: YYYY</p>
+          </div>
+          <div class="edu-item">
+            <h4>Self‑Study / Bootcamps</h4>
+            <p>Frontend frameworks, security fundamentals, and CI/CD workshops.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="projects" hidden>
+          <ul class="project-list-modal">
+            <li><a href="#projects" class="modal-project-link" data-target="#projects">Portfolio Website — demo & repo</a></li>
+            <li><a href="#projects" class="modal-project-link" data-target="#projects">E‑Commerce UI — demo & repo</a></li>
+            <li><a href="#projects" class="modal-project-link" data-target="#projects">Weather Dashboard — demo & repo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating back-to-top button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+    // sticky navbar UX: add 'scrolled' when page scrolls to increase contrast
+    (function () {
+      const nav = document.getElementById('mainNav');
+      const navBg = document.querySelector('.nav-bg');
+      const links = document.querySelectorAll('.nav-link');
+
+      function onScroll() {
+        if (window.scrollY > 8) {
+          nav.classList.add('scrolled');
+          navBg.classList.add('visible');
+        } else {
+          nav.classList.remove('scrolled');
+          navBg.classList.remove('visible');
+        }
+
+        // highlight nav links by section
+        document.querySelectorAll('section[id]').forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const link = document.querySelector('.nav-link[href="#' + section.id + '"]');
+          if (!link) return;
+          if (rect.top <= 120 && rect.bottom > 120) {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', onScroll);
+
+      // modal and tab behavior (kept same)
+      (function () {
+        const modal = document.getElementById('infoModal');
+        const panels = modal.querySelectorAll('.tab-panel');
+        const tabBtns = modal.querySelectorAll('.tab-btn');
+        const closeBtn = modal.querySelector('.modal-close');
+
+        function openModal(tab) {
+          modal.setAttribute('aria-hidden', 'false');
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          switchTab(tab);
+          modal.querySelector('.tab-btn[data-tab="' + tab + '"]').focus();
+        }
+        function closeModal() {
+          modal.setAttribute('aria-hidden', 'true');
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+        function switchTab(tab) {
+          panels.forEach(p => p.hidden = p.getAttribute('data-panel') !== tab);
+          tabBtns.forEach(b => {
+            const is = b.getAttribute('data-tab') === tab;
+            b.classList.toggle('active', is);
+            b.setAttribute('aria-selected', String(is));
+          });
+        }
+
+        document.querySelectorAll('[data-open="modal"]').forEach(btn => {
+          btn.addEventListener('click', () => openModal(btn.getAttribute('data-tab') || 'languages'));
+        });
+        tabBtns.forEach(b => b.addEventListener('click', () => switchTab(b.getAttribute('data-tab'))));
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        modal.querySelectorAll('[data-target]').forEach(a => {
+          a.addEventListener('click', e => {
+            e.preventDefault();
+            closeModal();
+            const t = document.querySelector(a.getAttribute('data-target'));
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+        });
+        closeModal();
+      })();
+
+      // smooth scroll for navbar links (offset for fixed nav)
+      document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          const target = document.querySelector(this.getAttribute('href'));
+          if (!target) return;
+          const offset = 86; // matches CSS navbar height + gap
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      });
+    })();
+
+    (function(){
+    // Back to top button behavior
+    const backBtn = document.getElementById('backToTop');
+    if (backBtn) {
+      const showAfter = 300; // px scrolled before showing button
+
+      function updateBackBtn() {
+        if (window.scrollY > showAfter) backBtn.classList.add('visible');
+        else backBtn.classList.remove('visible');
+      }
+
+      // Smooth scroll to top
+      backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Update on scroll / load
+      window.addEventListener('scroll', updateBackBtn, { passive: true });
+      window.addEventListener('load', updateBackBtn);
+      updateBackBtn();
+    }
+  })();
+  </script>
+</body>
+</html>
