@@ -85,7 +85,7 @@ export const portfolioData = {
       id: 1,
       title: "Hotel Management System",
       description: "Full‑stack application for managing rooms, bookings, customers, and payments with operational dashboards and billing workflows.",
-      image: "../../public/projects/hotel-management.png",
+      image: "/projects/hotel-management.png",
       tags: ["Node.js", "Express.js", "React.js", "PostgreSQL"],
       links: {
         github: "#",
@@ -96,7 +96,7 @@ export const portfolioData = {
       id: 2,
       title: "SmartPool System",
       description: "IoT-integrated monitoring system tracking pool conditions, usage statistics, and maintenance alerts to improve safety and efficiency.",
-      image: "../../public/projects/smartpool.png",
+      image: "/projects/smartpool.png",
       tags: ["JavaScript", "Node.js", "IoT", "PostgreSQL"],
       links: {
         github: "#",
@@ -107,7 +107,7 @@ export const portfolioData = {
       id: 3,
       title: "M‑Pesa Billing Integration",
       description: "Backend service handling M‑Pesa payment requests and confirmations, updating billing records in real time via REST APIs.",
-      image: "../../public/projects/mpesa.png",
+      image: "/projects/mpesa.png",
       tags: ["Node.js", "REST API", "Payment Gateway"],
       links: {
         github: "#",
@@ -118,7 +118,7 @@ export const portfolioData = {
       id: 4,
       title: "E‑Commerce Website",
       description: "Online store UI with cart and payment flow, responsive layout and accessible components.",
-      image: "../../public/projects/ecommerce.PNG",
+      image: "/projects/ecommerce.PNG",
       tags: ["HTML", "CSS", "JavaScript"],
       links: {
         github: "https://github.com/skipper-blue/skipperglitch",
@@ -129,7 +129,7 @@ export const portfolioData = {
       id: 5,
       title: "Portfolio Website",
       description: "Personal portfolio showcasing projects, blog and contact form with smooth animations.",
-      image: "../../public/projects/portifolio.PNG",
+      image: "/projects/portifolio.PNG",
       tags: ["HTML", "CSS", "Bootstrap"],
       links: {
         github: "https://github.com/",
@@ -140,7 +140,7 @@ export const portfolioData = {
       id: 6,
       title: "Weather App",
       description: "Realtime weather dashboard with API integration and charted data.",
-      image: "../../public/projects/weather.jpeg",
+      image: "/projects/weather.jpeg",
       tags: ["HTML", "CSS", "API"],
       links: {
         github: "https://github.com/",
